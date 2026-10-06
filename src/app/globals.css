@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #EFF1F5;
+  --foreground: #72758A;
+  --night-mode: #1E1E2E;
+  --accent-color-text:#F2A174;
+  --accent-color-background:#FE640B;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+::selection{
+  color: var(--background);
+  background-color: var(--accent-color-text);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:"f1";
+}
+
+@font-face {
+  font-family: "f1";
+  src: url("/jetbrains-mono-latin-400-normal.V6pRDFza.woff2");
+}
+
+.actb{color:var(--accent-color-background)} .acb{color: var(--accent-color-background);} .act{color:var(--accent-color-text)}
+
+.dotted-link {
+  color: var(--accent-color-background);               /* Text color (e.g., blue) */
+  border-bottom: 1px dashed var(--accent-color-background); /* Match the text color */
+  text-decoration: none;        /* Removes default underline */
 }
